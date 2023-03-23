@@ -11,53 +11,51 @@ import android.view.View;
 import com.example.c868capstone_raftingguideschedulingapplication.R;
 import com.example.c868capstone_raftingguideschedulingapplication.database.Repository;
 import com.example.c868capstone_raftingguideschedulingapplication.entities.Equipment;
-import com.example.c868capstone_raftingguideschedulingapplication.entities.Guides;
+import com.example.c868capstone_raftingguideschedulingapplication.entities.Trips;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-public class EquipmentList extends AppCompatActivity {
+public class TripsList extends AppCompatActivity {
 
     private Repository repository;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_equipment_list);
+        setContentView(R.layout.activity_river_trips_list);
 
-        FloatingActionButton fab = findViewById(R.id.addNewEquipmentBtn);
+        FloatingActionButton fab = findViewById(R.id.addTripBtn);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EquipmentList.this, EquipmentDetails.class);
+                Intent intent = new Intent(TripsList.this, TripDetails.class);
                 startActivity(intent);
             }
         });
 
         repository = new Repository(getApplication());
-        List<Equipment> allEquipment = repository.getAllEquipment();
-        RecyclerView recyclerView = findViewById(R.id.equipListRecView);
-        final EquipmentListAdapter equipmentListAdapter = new EquipmentListAdapter(this);
-        recyclerView.setAdapter(equipmentListAdapter);
+        List<Trips> allTrips = repository.getAllTrips();
+        RecyclerView recyclerView = findViewById(R.id.tripListRecView);
+        final TripListAdapter tripListAdapter = new TripListAdapter(this);
+        recyclerView.setAdapter(tripListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        equipmentListAdapter.setGuides(allEquipment);
-        equipmentListAdapter.notifyDataSetChanged();
-
+        tripListAdapter.setTrips(allTrips);
+        tripListAdapter.notifyDataSetChanged();
 
 
     }
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
-        List<Equipment> allEquipment = repository.getAllEquipment();
-        RecyclerView recyclerView = findViewById(R.id.equipListRecView);
-        final EquipmentListAdapter equipmentListAdapter = new EquipmentListAdapter(this);
-        recyclerView.setAdapter(equipmentListAdapter);
+        List<Trips> allTrips = repository.getAllTrips();
+        RecyclerView recyclerView = findViewById(R.id.tripListRecView);
+        final TripListAdapter tripListAdapter = new TripListAdapter(this);
+        recyclerView.setAdapter(tripListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        equipmentListAdapter.setGuides(allEquipment);
-        equipmentListAdapter.notifyDataSetChanged();
+        tripListAdapter.setTrips(allTrips);
+        tripListAdapter.notifyDataSetChanged();
     }
-
-
 }

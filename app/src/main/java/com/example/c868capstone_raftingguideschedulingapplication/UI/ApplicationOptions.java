@@ -32,7 +32,7 @@ public class ApplicationOptions extends AppCompatActivity {
     }
 
     public void launchTrips (View view) {
-        Intent intent = new Intent(this, RiverTripsList.class);
+        Intent intent = new Intent(this, TripsList.class);
         startActivity(intent);
     }
 

@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.c868capstone_raftingguideschedulingapplication.R;
 
-public class RiverTripsList extends AppCompatActivity {
+public class TripDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_river_trips_list);
+        setContentView(R.layout.activity_trip_details);
     }
 }

@@ -12,33 +12,54 @@
         android:theme="@style/Theme.C868CapstoneRaftingGuideSchedulingApplication"
         tools:targetApi="31">
         <activity
+            android:name=".UI.TripDetails"
+            android:exported="false"
+            android:label="Trip Details"
+            android:parentActivityName=".UI.TripsList"/>
+        <activity
+            android:name=".UI.EquipmentDetails"
+            android:exported="false"
+            android:label="Equipment Details"
+            android:parentActivityName=".UI.EquipmentList" />
+        <activity
+            android:name=".UI.GuideDetails"
+            android:exported="false"
+            android:label="Guide Details"
+            android:parentActivityName=".UI.GuideList" />
+        <activity
+            android:name=".UI.CustomerDetails"
+            android:exported="false"
+            android:label="Customer Details"
+            android:parentActivityName=".UI.CustomerList" />
+        <activity
             android:name=".UI.Reports"
             android:exported="false"
             android:label="Reports"
-            android:parentActivityName=".UI.ApplicationOptions"/>
+            android:parentActivityName=".UI.ApplicationOptions" />
         <activity
-            android:name=".UI.RiverTripsList"
+            android:name=".UI.TripsList"
             android:exported="false"
             android:label="River Trips"
-            android:parentActivityName=".UI.ApplicationOptions"/>
+            android:parentActivityName=".UI.ApplicationOptions" />
         <activity
             android:name=".UI.EquipmentList"
             android:exported="false"
             android:label="Equipment"
-            android:parentActivityName=".UI.ApplicationOptions"/>
+            android:parentActivityName=".UI.ApplicationOptions" />
         <activity
             android:name=".UI.GuideList"
             android:exported="false"
             android:label="Guides"
-            android:parentActivityName=".UI.ApplicationOptions"/>
+            android:parentActivityName=".UI.ApplicationOptions" />
         <activity
             android:name=".UI.CustomerList"
             android:exported="false"
             android:label="Customers"
-            android:parentActivityName=".UI.ApplicationOptions"/>
+            android:parentActivityName=".UI.ApplicationOptions" />
         <activity
             android:name=".UI.ApplicationOptions"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Application Options" />
         <activity
             android:name=".UI.MainActivity"
             android:exported="true">

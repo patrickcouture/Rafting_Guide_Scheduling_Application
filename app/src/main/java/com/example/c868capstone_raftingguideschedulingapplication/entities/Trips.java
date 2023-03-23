@@ -12,16 +12,20 @@ public class Trips {
     @PrimaryKey(autoGenerate = true)
     private int tripID;
 
+    private String tripName;
+
     private String location;
     private int guideID;
     private int customerID;
     private int equipmentID;
-    private Date tripStart;
-    private Date tripEnd;
+    private String tripStart;
+    private String tripEnd;
     private String tripNotes;
 
-    public Trips(int tripID, String location, int guideID, int customerID, int equipmentID, Date tripStart, Date tripEnd, String tripNotes) {
+
+    public Trips(int tripID, String tripName, String location, int guideID, int customerID, int equipmentID, String tripStart, String tripEnd, String tripNotes) {
         this.tripID = tripID;
+        this.tripName = tripName;
         this.location = location;
         this.guideID = guideID;
         this.customerID = customerID;
@@ -40,6 +44,14 @@ public class Trips {
 
     public void setTripID(int tripID) {
         this.tripID = tripID;
+    }
+
+    public String getTripName() {
+        return tripName;
+    }
+
+    public void setTripName(String tripName) {
+        this.tripName = tripName;
     }
 
     public String getLocation() {
@@ -74,19 +86,19 @@ public class Trips {
         this.equipmentID = equipmentID;
     }
 
-    public Date getTripStart() {
+    public String getTripStart() {
         return tripStart;
     }
 
-    public void setTripStart(Date tripStart) {
+    public void setTripStart(String tripStart) {
         this.tripStart = tripStart;
     }
 
-    public Date getTripEnd() {
+    public String getTripEnd() {
         return tripEnd;
     }
 
-    public void setTripEnd(Date tripEnd) {
+    public void setTripEnd(String tripEnd) {
         this.tripEnd = tripEnd;
     }
 
