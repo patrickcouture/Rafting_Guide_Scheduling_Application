@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CustomerDetails extends BaseActivity {
+public class CustomerDetails extends AppCompatActivity {
 
     EditText editCustomerName;
     EditText editCustomerEmail;

@@ -14,7 +14,7 @@ import android.view.View;
 
 import com.example.c868capstone_raftingguideschedulingapplication.R;
 
-public class ApplicationOptions extends BaseActivity {
+public class ApplicationOptions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

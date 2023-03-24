@@ -20,7 +20,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class EquipmentList extends BaseActivity {
+public class EquipmentList extends AppCompatActivity {
 
     private Repository repository;
     private EditText searchEquipmentEditText;

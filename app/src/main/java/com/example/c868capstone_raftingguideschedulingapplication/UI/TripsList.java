@@ -20,7 +20,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TripsList extends BaseActivity {
+public class TripsList extends AppCompatActivity {
 
     private Repository repository;
     private EditText searchTripEditText;

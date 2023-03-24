@@ -21,7 +21,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GuideList extends BaseActivity {
+public class GuideList extends AppCompatActivity {
 
     private Repository repository;
 

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#918D8D"
+    tools:context=".UI.ApplicationOptions">
+
+  <Button
+      android:id="@+id/customersBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="52dp"
+      android:layout_marginTop="44dp"
+      android:backgroundTint="#3F51B5"
+      android:onClick="launchCustomers"
+      android:text="Customers"
+      app:layout_constraintStart_toEndOf="@+id/imageView3"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/imageView3"
+      android:layout_width="136dp"
+      android:layout_height="111dp"
+      android:layout_marginStart="96dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/kisspng_student_university_erasmus_programme_education_cou_student_5ab5f9bf4846a6_4689455215218753912961" />
+
+  <ImageView
+      android:id="@+id/imageView4"
+      android:layout_width="134dp"
+      android:layout_height="100dp"
+      android:layout_marginStart="92dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView3"
+      app:srcCompat="@drawable/kisspng_life_jackets_gilets_personal_water_craft_jobe_wate_vests_5ae1eff4c232e3_8167595315247564687955" />
+
+  <Button
+      android:id="@+id/riverguideBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="56dp"
+      android:layout_marginTop="60dp"
+      android:backgroundTint="#3F51B5"
+      android:onClick="launchRiverGuides"
+      android:text="River Guides"
+      app:layout_constraintStart_toEndOf="@+id/imageView4"
+      app:layout_constraintTop_toBottomOf="@+id/customersBtn" />
+
+  <ImageView
+      android:id="@+id/imageView5"
+      android:layout_width="132dp"
+      android:layout_height="105dp"
+      android:layout_marginStart="96dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView4"
+      app:layout_constraintVertical_bias="0.0"
+      app:srcCompat="@drawable/_a357a4aee1cc8_1789938315134541549753" />
+
+  <Button
+      android:id="@+id/equipmentBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="56dp"
+      android:layout_marginTop="76dp"
+      android:backgroundTint="#3F51B5"
+      android:onClick="launchEquipment"
+      android:text="Equipment"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/imageView5"
+      app:layout_constraintTop_toBottomOf="@+id/riverguideBtn"
+      app:layout_constraintVertical_bias="0.022" />
+
+  <ImageView
+      android:id="@+id/imageView6"
+      android:layout_width="134dp"
+      android:layout_height="110dp"
+      android:layout_marginStart="460dp"
+      android:layout_marginTop="48dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/people_rafting_7769894" />
+
+  <Button
+      android:id="@+id/tripsBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="52dp"
+      android:layout_marginTop="96dp"
+      android:layout_marginBottom="111dp"
+      android:backgroundTint="#3F51B5"
+      android:onClick="launchTrips"
+      android:text="Trips"
+      app:layout_constraintBottom_toTopOf="@+id/button6"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/imageView6"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0" />
+
+  <ImageView
+      android:id="@+id/imageView7"
+      android:layout_width="133dp"
+      android:layout_height="116dp"
+      android:layout_marginStart="464dp"
+      android:layout_marginTop="44dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView6"
+      app:layout_constraintVertical_bias="0.036"
+      app:srcCompat="@drawable/kisspng_computer_program_template_dashboard_fleet_manageme_excel_2007_dashboards_reports_for_dummies_5b3b101c82b3b0_6659613215305974045354" />
+
+  <Button
+      android:id="@+id/button6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="52dp"
+      android:layout_marginBottom="108dp"
+      android:backgroundTint="#3F51B5"
+      android:onClick="launchReports"
+      android:text="Reports"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/imageView7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

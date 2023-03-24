@@ -26,11 +26,11 @@ import java.util.Date;
 import java.util.List;
 /** This is the main activity of the application, responsible for the login functionality of the user.
  It extends the BaseActivity which contains the implementation of the options menu. */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     Button loginBtn, cancelBtn;
     EditText editTextUsername, editTextPassword;
-    TextView usernameLabel, passwordLabel;
+
     int counter = 3;
 
     /** It initializes the UI elements such as login button, cancel button, username and password fields.
@@ -44,6 +44,9 @@ public class MainActivity extends BaseActivity {
         Users user = new Users(1, "admin", "admin");
         Repository repository = new Repository(getApplication());
         repository.insert(user);
+
+        Users user1 = new Users(2, "test", "test");
+        repository.insert(user1);
 
         Customers customers = new Customers(1, "Jackson Tourist", "mr.patrickcouture@gmail.com", "4065819049", 8);
         repository.insert(customers);

@@ -10,10 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.C868CapstoneRaftingGuideSchedulingApplication"
-        tools:targetApi="31">
-        <activity
-            android:name=".BaseActivity"
-            android:exported="false" />
+        tools:targetApi="32">
         <activity
             android:name=".UI.TripDetails"
             android:exported="false"

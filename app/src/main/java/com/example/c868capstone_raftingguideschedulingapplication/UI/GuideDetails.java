@@ -22,7 +22,7 @@ import com.example.c868capstone_raftingguideschedulingapplication.entities.Trips
 import java.util.ArrayList;
 import java.util.List;
 
-public class GuideDetails extends BaseActivity {
+public class GuideDetails extends AppCompatActivity {
 
     EditText editGuideName;
     EditText editGuideEmail;

@@ -9,9 +9,10 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="388dp"
-        android:layout_height="268dp"
+        android:layout_width="386dp"
+        android:layout_height="190dp"
         android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
         android:fadeScrollbars="false"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,9 +66,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#FFFFFF"/>
+                    android:background="#FFFFFF" />
             </LinearLayout>
-
 
 
         </LinearLayout>
