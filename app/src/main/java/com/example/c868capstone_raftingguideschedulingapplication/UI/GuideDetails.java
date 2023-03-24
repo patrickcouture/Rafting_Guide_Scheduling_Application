@@ -88,9 +88,9 @@ public class GuideDetails extends AppCompatActivity {
         textCustBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get customer phone number
+                // Get guide phone number
                 String guidePhone = editGuidePhone.getText().toString();
-                // Launch text message intent with customer phone number populated
+                // Launch text message intent with guide phone number populated
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("sms:" + guidePhone));
                 startActivity(intent);

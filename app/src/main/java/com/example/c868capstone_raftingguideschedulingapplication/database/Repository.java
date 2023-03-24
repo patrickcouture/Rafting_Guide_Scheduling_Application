@@ -32,7 +32,7 @@ public class Repository {
     private List<Users> mAllUsers;
 
 
-    private static int NUMBER_OF_THREADS=4;
+    private static int NUMBER_OF_THREADS=12;
     static final ExecutorService databaseExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     public Repository(Application application) {

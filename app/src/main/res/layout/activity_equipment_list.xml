@@ -7,6 +7,8 @@
     android:background="#918D8D"
     tools:context=".UI.EquipmentList">
 
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addNewEquipmentBtn"
         android:layout_width="wrap_content"
@@ -21,11 +23,35 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/equipListRecView"
-        android:layout_width="363dp"
-        android:layout_height="485dp"
+        android:layout_width="370dp"
+        android:layout_height="258dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchEquipmentEditText"
+        android:layout_width="233dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equipListRecView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="91dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="SEARCH"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/searchEquipmentEditText"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equipListRecView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

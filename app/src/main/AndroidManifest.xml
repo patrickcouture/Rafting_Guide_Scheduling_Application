@@ -15,7 +15,7 @@
             android:name=".UI.TripDetails"
             android:exported="false"
             android:label="Trip Details"
-            android:parentActivityName=".UI.TripsList"/>
+            android:parentActivityName=".UI.TripsList" />
         <activity
             android:name=".UI.EquipmentDetails"
             android:exported="false"

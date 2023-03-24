@@ -8,25 +8,37 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.c868capstone_raftingguideschedulingapplication.R;
 import com.example.c868capstone_raftingguideschedulingapplication.database.Repository;
 import com.example.c868capstone_raftingguideschedulingapplication.entities.Customers;
+import com.example.c868capstone_raftingguideschedulingapplication.entities.Trips;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CustomerList extends AppCompatActivity {
 
     private Repository repository;
+
+    private EditText searchCustomerEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_list);
+
+        searchCustomerEditText = findViewById(R.id.searchCustomerEditText);
+        searchCustomerEditText.addTextChangedListener(searchCustomerTextWatcher);
+
         FloatingActionButton fab = findViewById(R.id.addNewCustomerBtn);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,4 +135,32 @@ public class CustomerList extends AppCompatActivity {
         }
 
     }
+
+    private TextWatcher searchCustomerTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            // Filter the list of equipment items based on the searchInput variable
+            List<Customers> filteredCustomers = repository.getAllCustomers().stream()
+                    .filter(c -> c.getCustomerName().toLowerCase().contains(s.toString().toLowerCase()))
+                    .collect(Collectors.toList());
+
+            // Update the recycler view with the filtered list
+            RecyclerView recyclerView = findViewById(R.id.custListRecView);
+            final CustomerAdapter customerAdapter = new CustomerAdapter(CustomerList.this);
+            recyclerView.setAdapter(customerAdapter);
+            recyclerView.setLayoutManager(new LinearLayoutManager(CustomerList.this));
+            customerAdapter.setCustomers(filteredCustomers);
+            customerAdapter.notifyDataSetChanged();
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 }

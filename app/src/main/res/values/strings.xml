@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Rafting</string>
+
+    <string-array name="trip_location">
+        <item>Upper Shoshone</item>
+        <item>Lower Shoshone</item>
+        <item>Clarks Fork</item>
+        <item>Big Horn</item>
+        <item>Yellowstone</item>
+        <item>Wind River</item>
+    </string-array>
+
+    <string-array name="trip_name">
+        <item>The OverNighter</item>
+        <item>Three on Class Three</item>
+        <item>Five Alive</item>
+        <item>The Triple Sevens</item>
+        <item>Extreme Ten</item>
+    </string-array>
+
+    <string name="tripNameSpinnerHint">Choose A Trip Name</string>
+    <string name="tripLocationSpinnerHint">Choose A Trip Location</string>
+    <string name="tripGuideSpinnerHint">Choose A Trip Guide</string>
+    <string name="tripCustomerSpinnerHint">Choose A Trip Customer</string>
+    <string name="tripEquipmentSpinnerHint">Choose the Trip Equipment</string>
+    <string name="tripdateHint">Double Click to get Calendar</string>
+
 </resources>

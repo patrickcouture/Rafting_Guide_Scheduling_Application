@@ -16,20 +16,20 @@ import com.example.c868capstone_raftingguideschedulingapplication.entities.Guide
 
 import java.util.List;
 
-public class EquipmentListAdapter extends RecyclerView.Adapter<EquipmentListAdapter.EquipViewHolder>{
+public class TripsEquipmentAdapter extends RecyclerView.Adapter<TripsEquipmentAdapter.TripsEquipViewHolder>{
 
-    class EquipViewHolder extends RecyclerView.ViewHolder {
+    class TripsEquipViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView equipItemView;
+        private final TextView assignTripItemView;
 
-        private EquipViewHolder (View view) {
+        private TripsEquipViewHolder (View view) {
             super(view);
-            equipItemView = view.findViewById(R.id.equipListItemTextView);
+            assignTripItemView = view.findViewById(R.id.assocTripsTxView);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    final Equipment current = mEquipment.get(position);
+                    final Equipment current = mTripsEquip.get(position);
                     Intent intent = new Intent(context, EquipmentDetails.class);
                     intent.putExtra("equipmentID", current.getEquipmentID());
                     intent.putExtra("equipmentName", current.getEquipmentName());
@@ -39,42 +39,44 @@ public class EquipmentListAdapter extends RecyclerView.Adapter<EquipmentListAdap
             });
         }
     }
-    private List<Equipment> mEquipment;
+    private List<Equipment> mTripsEquip;
 
     private final Context context;
 
     private final LayoutInflater mInflater;
 
-    public EquipmentListAdapter(Context context) {
+    public TripsEquipmentAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
         this.context = context;
     }
 
     @NonNull
     @Override
-    public EquipmentListAdapter.EquipViewHolder onCreateViewHolder (@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.equip_list_item, parent, false);
+    public TripsEquipmentAdapter.TripsEquipViewHolder onCreateViewHolder (@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.trip_list_item, parent, false);
 
-        return new EquipmentListAdapter.EquipViewHolder(view);
+        return new TripsEquipmentAdapter.TripsEquipViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull EquipmentListAdapter.EquipViewHolder holder, int position){
-        Equipment currentEquipment = mEquipment.get(position);
-        holder.equipItemView.setText(currentEquipment.getEquipmentName());
+    public void onBindViewHolder(@NonNull TripsEquipmentAdapter.TripsEquipViewHolder holder, int position){
+        if(mTripsEquip != null) {
+            Equipment currentEquipment = mTripsEquip.get(position);
+            String name = currentEquipment.getEquipmentName();
+            holder.assignTripItemView.setText(name);
+        } else {
+            holder.assignTripItemView.setText("No Trip Name");
+        }
     }
 
     public void setEquipment(List<Equipment> equipment){
-        mEquipment = equipment;
+        mTripsEquip = equipment;
         notifyDataSetChanged();
     }
 
     public int getItemCount() {
-        if(mEquipment != null) {
-            return mEquipment.size();
+        if(mTripsEquip != null) {
+            return mTripsEquip.size();
         } else return 0;
     }
-
-
-
 }

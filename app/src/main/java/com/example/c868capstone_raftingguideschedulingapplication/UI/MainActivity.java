@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Guides guides = new Guides(1, "Joe Rafter", "joerafter@gmail.com", "5554441212");
         repository.insert(guides);
 
-        Trips trips = new Trips(1, "Tourist Family Reunion", "Upper Shoshone", 1, 1, 1, "06/01/2023", "06/05/2023", "Group would like to stop for a picnic");
+        Trips trips = new Trips(1, "The OverNighter", "Upper Shoshone", 1, 1, 1, "06/01/23", "06/05/23", "Group would like to stop for a picnic");
         repository.insert(trips);
 
         loginBtn = (Button) findViewById(R.id.loginBtn);

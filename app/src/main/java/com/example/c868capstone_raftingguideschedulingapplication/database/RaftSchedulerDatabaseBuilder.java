@@ -18,7 +18,7 @@ import com.example.c868capstone_raftingguideschedulingapplication.entities.Guide
 import com.example.c868capstone_raftingguideschedulingapplication.entities.Trips;
 import com.example.c868capstone_raftingguideschedulingapplication.entities.Users;
 
-@Database(entities = {Customers.class, Equipment.class, Guides.class, Trips.class, Users.class}, version = 3, exportSchema = false)
+@Database(entities = {Customers.class, Equipment.class, Guides.class, Trips.class, Users.class}, version = 7, exportSchema = false)
 public abstract class RaftSchedulerDatabaseBuilder extends RoomDatabase {
 
     public abstract CustomersDAO customersDAO();

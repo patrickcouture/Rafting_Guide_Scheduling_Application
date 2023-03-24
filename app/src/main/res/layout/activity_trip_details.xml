@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#918D8D"
     tools:context=".UI.TripDetails">
 
 
@@ -11,11 +12,12 @@
         android:id="@+id/scrollView2"
         android:layout_width="388dp"
         android:layout_height="268dp"
+        android:layout_marginTop="8dp"
         android:fadeScrollbars="false"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +44,8 @@
                     android:id="@+id/tripNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:autofillHints="@string/tripNameSpinnerHint" />
             </LinearLayout>
 
             <LinearLayout
@@ -65,7 +68,8 @@
                     android:id="@+id/locationEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:autofillHints="@string/tripLocationSpinnerHint" />
             </LinearLayout>
 
             <LinearLayout
@@ -88,7 +92,8 @@
                     android:id="@+id/tripGuideNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:autofillHints="@string/tripGuideSpinnerHint" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,7 +117,8 @@
                     android:id="@+id/tripCustNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:autofillHints="@string/tripCustomerSpinnerHint" />
             </LinearLayout>
 
             <LinearLayout
@@ -136,7 +142,8 @@
                     android:id="@+id/tripEquipNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:autofillHints="@string/tripEquipmentSpinnerHint" />
             </LinearLayout>
 
             <LinearLayout
@@ -160,7 +167,9 @@
                     android:id="@+id/tripstartDateEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:autofillHints="@string/tripdateHint" />
             </LinearLayout>
 
             <LinearLayout
@@ -184,7 +193,9 @@
                     android:id="@+id/tripEndDateEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:autofillHints="@string/tripdateHint"/>
             </LinearLayout>
 
             <LinearLayout
@@ -237,7 +248,7 @@
 
 
     <Button
-        android:id="@+id/custSaveBtn"
+        android:id="@+id/tripSaveBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
@@ -250,7 +261,7 @@
 
 
     <Button
-        android:id="@+id/custTextBtn"
+        android:id="@+id/textNotesToGuideBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
