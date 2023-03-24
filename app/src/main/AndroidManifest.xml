@@ -12,6 +12,9 @@
         android:theme="@style/Theme.C868CapstoneRaftingGuideSchedulingApplication"
         tools:targetApi="31">
         <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.TripDetails"
             android:exported="false"
             android:label="Trip Details"

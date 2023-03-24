@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-public class Reports extends AppCompatActivity {
+public class Reports extends BaseActivity {
 
     Repository repository;
     @Override

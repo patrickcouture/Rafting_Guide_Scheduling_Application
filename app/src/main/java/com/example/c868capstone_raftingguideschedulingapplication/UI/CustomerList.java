@@ -25,7 +25,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CustomerList extends AppCompatActivity {
+public class CustomerList extends BaseActivity {
 
     private Repository repository;
 
@@ -163,4 +163,8 @@ public class CustomerList extends AppCompatActivity {
 
         }
     };
+    public void exitApp(View view) {
+        ((ApplicationOptions) this.getApplicationContext()).exitApp();
+    }
+
 }

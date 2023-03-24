@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-public class TripDetails extends AppCompatActivity {
+public class TripDetails extends BaseActivity {
 
     Spinner editTripName;
     Spinner editLocation;

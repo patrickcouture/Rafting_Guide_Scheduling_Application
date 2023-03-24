@@ -20,7 +20,7 @@ import com.example.c868capstone_raftingguideschedulingapplication.entities.Trips
 import java.util.ArrayList;
 import java.util.List;
 
-public class EquipmentDetails extends AppCompatActivity {
+public class EquipmentDetails extends BaseActivity {
 
     EditText editEquipName;
     NumberPicker editEquipCapacity;

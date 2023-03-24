@@ -1,14 +1,20 @@
 package com.example.c868capstone_raftingguideschedulingapplication.UI;
 
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.c868capstone_raftingguideschedulingapplication.R;
 
-public class ApplicationOptions extends AppCompatActivity {
+public class ApplicationOptions extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,4 +46,7 @@ public class ApplicationOptions extends AppCompatActivity {
         Intent intent = new Intent(this, Reports.class);
         startActivity(intent);
     }
+
+
+
 }
